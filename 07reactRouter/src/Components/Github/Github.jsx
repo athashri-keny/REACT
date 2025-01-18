@@ -1,8 +1,6 @@
 import { useLoaderData } from 'react-router';
+// when hover it calls the API
 
-import { data } from 'react-router'
-
-import React, { useState, useEffect } from "react";
 
 function Github() {
     const data =  useLoaderData()

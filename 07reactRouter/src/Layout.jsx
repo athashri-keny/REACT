@@ -7,7 +7,7 @@ function Layout() {
   return (
    <>
    <Header/>
-   <Outlet />
+   <Outlet />  {/* Allows nested routes to be rendered dynamically */} 
    <Footer />
 
    </>

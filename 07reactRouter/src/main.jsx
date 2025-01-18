@@ -32,6 +32,7 @@ import Github  , {GithubInfoloader}from './Components/Github/Github.jsx'
 //   }
 // ])
 
+// routing
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element = {<Layout />}>
@@ -41,6 +42,7 @@ const router = createBrowserRouter(
     <Route path='contact' element = {<Contact/>} />
     <Route path='user/:userid' element = {<User/>} />
     <Route 
+
       loader={GithubInfoloader}
       path='github' 
       element={<Github />}
