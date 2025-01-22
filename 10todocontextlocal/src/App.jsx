@@ -7,22 +7,23 @@ import TodoItem from './Components/TodoItem';
 
 
 function App() {
+
   const [todos, setTodos] = useState([]); 
 
   const addtodo = (todo) => {
     setTodos((oldTodo) => [{ id: Date.now(), ...todo }, ...oldTodo]); // ... means joins the new arrays to old arrays
   };
-
+  
  // it only updates the matching  id of the todo
   const updateTodo = (id, todo) => {
     setTodos((prev) =>
       prev.map((prevTodo) => (prevTodo.id === id ? todo : prevTodo)) // if the id matches the a new Todo is added to the array with the help of map 
-    );
+    ); 
   };
 
   const deleteTodo = (id) => { 
     setTodos((prev) => prev.filter((todo) => todo.id !== id)); // todo.id is not matching the the current id
-  };
+  }
 
  // The function finds the todo with the matching id and flips its completed value (true ↔ false). All other todos stay the same.
  
@@ -44,6 +45,7 @@ useEffect(() => {
 useEffect(() => {
   localStorage.setItem("todos", JSON.stringify(todos))
 } , [todos])
+
 
 
   return (

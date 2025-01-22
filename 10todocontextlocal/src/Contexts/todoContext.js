@@ -18,6 +18,7 @@ export const TodoContext = createContext({
 
 })
 
+  
 export const UseTodo = () => {
     return useContext(TodoContext) // when you use useContext always give which context you talking about
 }
