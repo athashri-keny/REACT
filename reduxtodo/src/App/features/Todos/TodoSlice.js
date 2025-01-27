@@ -14,6 +14,7 @@ const initialState = {
 // creating slice (features) for the app
 export const TodoSlice = createSlice({
     name: 'todos',
+    
     initialState, // adding the initailState of the todo
 
     // state means the current situation 
